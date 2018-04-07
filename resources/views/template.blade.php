@@ -70,7 +70,7 @@
                         <li><a href="#">Drop Down 5</a></li>
                     </ul>
                 </li>
-                <li><a href="#">{{__('template.butlogin')}}</a></li>
+                <li><a href="#"  data-toggle="modal" data-target="#myModal" >{{__('template.butlogin')}}</a></li>
                 <li><a href="#contact">{{__('template.butcontact')}}</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->

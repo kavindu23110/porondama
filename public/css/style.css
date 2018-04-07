@@ -1455,3 +1455,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 13px;
   color: #ddd;
 }
+.but{
+  float: right;
+}
