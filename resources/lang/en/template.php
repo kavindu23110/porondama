@@ -10,4 +10,5 @@ return[
     'name'=>'porondama',
     'buthome'=>'Home',
      'butlogin'=>'login',
+     'butservice'=>"services"
 ];
