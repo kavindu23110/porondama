@@ -9,6 +9,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicons -->
     <link href="{{\Illuminate\Support\Facades\URL::asset('images/favicon.png')}}" rel="icon">
@@ -20,7 +22,8 @@
     <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
     <script src="/js/app.js"></script>
     <!-- Bootstrap CSS File -->
-
+   
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
     <link rel="stylesheet" href="{{ URL::asset('css/font-awesome/css/font-awesome.min.css') }}" />
@@ -29,7 +32,6 @@
     <link rel="stylesheet" href="{{ URL::asset('css/owlcarousel/assets/owl.carousel.min.css') }}" />
     <link rel="stylesheet" href="{{ URL::asset('css/lightbox/css/lightbox.min.css')}}" />
 
-    <link href="/css/app.css" rel="stylesheet">
     <!-- Main Stylesheet File -->
     <link rel="stylesheet" href="{{ URL::asset('css/style.css')}}" />
 
@@ -41,7 +43,9 @@
     ======================================================= -->
 </head>
 
-<body>
+<body @if (Route::currentRouteName()==='login')
+style="background-color: black"    
+@endif>
 
 <!--==========================
   Header
@@ -52,7 +56,7 @@
         <div id="logo" class="pull-left">
             <h1><a href="#intro" class="scrollto">{{__('template.name')}}</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
-          <a href="#intro"><img src="{{url('/images/logo.png')}}"  alt="" title="" /></a>
+           <a href="#intro"><img src="{{url('/images/logo.png')}}"  alt="" title="" /></a>
         </div>
 
         <nav id="nav-menu-container">
@@ -74,7 +78,7 @@
                 <li><a href="#contact">{{__('template.butcontact')}}</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
-    </div>
+    </div> 
 </header><!-- #header -->
 
 @yield('content')

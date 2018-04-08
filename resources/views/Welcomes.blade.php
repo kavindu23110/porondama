@@ -1,5 +1,4 @@
 @extends('template')
-
 @section('content')
     <!--==========================
   Intro Section
