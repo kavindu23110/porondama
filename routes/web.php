@@ -26,3 +26,6 @@ Route::get('/sin', function () {
     app()->setLocale('sin');
     return view('welcomes');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
