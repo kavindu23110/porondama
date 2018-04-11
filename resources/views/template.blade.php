@@ -43,9 +43,9 @@
     ======================================================= -->
 </head>
 
-<body @if (Route::currentRouteName()==='login')
+<body 
 style="background-color: black"    
-@endif>
+>
 
 <!--==========================
   Header
